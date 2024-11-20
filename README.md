@@ -1,1 +1,1 @@
-# django-template
+# django-template-project

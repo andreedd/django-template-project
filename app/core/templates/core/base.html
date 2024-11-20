@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% translate "App" %}{% endblock %}</title>
+        <meta name="description" content={% translate "App description" %}>
+
+        <meta property="og:title" content="App">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.example.com">
+        <meta property="og:description" content={% translate "App description" %}>
+        <meta property="og:site_name" content="App">
+    {#    <meta property="og:image" content="{% static "images/image.png" %}">#}
+
+        <link rel="icon" href={% static "favicons/favicon.ico" %}>
+    </head>
+
+    <body>
+        {% include "core/navbar.html" %}
+        {% block content %}{% endblock %}
+        {% include "core/footer.html" %}
+    </body>
+</html>
